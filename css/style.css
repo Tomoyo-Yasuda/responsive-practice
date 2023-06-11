@@ -14,11 +14,24 @@
   margin: 0 auto;
 }
 
-.margin-change{
+.margin-container{
   display: flex;
+  margin: 0 auto;
+}
+
+.margin-box{
   width: 300px;
   height: 300px;
-  margin: 
+  margin-left: 150px;
+}
+
+.left-box{
+  background-color: #0008ff;
+  margin-left: 0;
+}
+
+.right-box{
+  background-color: #22ff00;
 }
 
 
@@ -34,5 +47,13 @@
     width: 300px;
     height: 300px;
     margin: 0 auto;
+  }
+
+  .margin-container{
+    margin: 0 auto;
+  }
+
+  .margin-box{
+    margin-left: 50px;
   }
 }
