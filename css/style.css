@@ -82,6 +82,24 @@
   align-items: center;
   line-height: 300px;
 }
+/* 順番変更（指定） */
+.change-container{
+  display: flex;
+  justify-content: center;
+}
+.change-box{
+  width: 300px;
+  height: 300px;
+}
+.change-first-box{
+  background-color: #00ff51;
+}
+.change-second-box{
+  background-color: #d4ff40
+}
+.change-third-box{
+  background-color: #ff00e1;
+}
 
 @media screen and (max-width:960px){
   /* サイズ変更 */
@@ -114,5 +132,16 @@
   flex-direction: row-reverse;
   align-items: flex-start;
   display: flex;
+  }
+  /* 順番変更（指定） */
+  .change-container{
+    display: flex;
+
+  }
+  .change-first-box{
+    order: 2;
+  }
+  .change-second-box{
+    order: 3;
   }
 }
