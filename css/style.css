@@ -12,7 +12,7 @@
   margin: 0 auto;
 }
 
-.colorchange{
+.color-change{
   background-color: #ff0000;
   width: 300px;
   height: 300px;
@@ -65,6 +65,30 @@
   background-color: #0008ff;
 }
 
+.reverse-box{
+  width: 300px;
+  height: 300px;
+  display: flex;
+}
+
+.reverse-first-box{
+  background-color: #ff0000;
+}
+
+.reverse-second-box{
+  background-color: #0008ff;
+}
+
+.reverse-third-box{
+  background-color: #ff8400;
+}
+
+.text{
+  display: inline-block;
+  text-align: center;
+  line-height: 300px;
+}
+
 @media screen and (max-width:960px){
   .size-change{
     background-color: #ff0000;
@@ -72,7 +96,7 @@
     height: 200px;
     margin: 0 auto;
   }
-  .colorchange{
+  .color-change{
     background-color: #007bff;
     width: 300px;
     height: 300px;
