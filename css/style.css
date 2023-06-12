@@ -20,24 +20,19 @@
 }
 
 .margin-container{
-  position: relative;
-  overflow: hidden;
-}
-
-.margin-content{
-  position: relative;
-  left: 50%; /* リスト全体であるul要素を右に50%移動。つまり先頭を中央に持ってくる感じです。 */
-  float: left;
+  display: flex;
+  justify-content: center;
 }
 
 .margin-box{
-  position: relative;
-  float: left;
-  left: -50%;
+  width: 300px;
+  height: 300px;
+  margin-left: 150px;
 }
 
 .margin-left-box{
   background-color: #0008ff;
+  margin-left: 0;
 }
 
 .margin-right-box{
@@ -45,15 +40,22 @@
 }
 
 .float-container{
-  display: block;
+  position: relative;
   overflow: hidden;
 }
 
+.float-content{
+  position: relative;
+  left: 50%; /* ulの代替的なやつを右に50%移動 */
+  float: left;
+}
+
 .float-box{
+  position: relative;
   float: left;
   width: 300px;;
   height: 300px;
-  text-align: center;
+  left: -50%;/* ulの代替的なやつ中央に戻す */
 }
 
 .float-red-box{
@@ -85,5 +87,7 @@
     margin-left: 50px;
   }
 
-
+  .float-content, .float-box{
+    float: none;
+  }
 }
