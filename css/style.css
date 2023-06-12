@@ -4,7 +4,6 @@
   width: 1100px;
   margin: 0 auto;
 }
-
 /* サイズ変更 */
 .size-change{
   background-color: #ff0000;
@@ -12,7 +11,6 @@
   height: 400px;
   margin: 0 auto;
 }
-
 /* 色変更 */
 .color-change{
   background-color: #ff0000;
@@ -20,40 +18,33 @@
   height: 300px;
   margin: 0 auto;
 }
-
 /* マージン変更 */
 .margin-container{
   display: flex;
   justify-content: center;
 }
-
 .margin-box{
   width: 300px;
   height: 300px;
   margin-left: 150px;
 }
-
 .margin-left-box{
   background-color: #0008ff;
   margin-left: 0;
 }
-
 .margin-right-box{
   background-color: #22ff00;
 }
-
 /* フロート変更 */
 .float-container{
   position: relative;
   overflow: hidden;
 }
-
 .float-content{
   position: relative;
   left: 50%; /* ulの代替的なやつを右に50%移動 */
   float: left;
 }
-
 .float-box{
   position: relative;
   float: left;
@@ -61,38 +52,30 @@
   height: 300px;
   left: -50%;/* ulの代替的なやつ中央に戻す */
 }
-
 .float-red-box{
   background-color: #ff0000;
 }
-
 .float-blue-box{
   background-color: #0008ff;
 }
-
 /* 順番変更（逆順） */
 .reverse-container{
   display: flex;
   justify-content: center;
 }
-
 .reverse-box{
   width: 300px;
   height: 300px;
 }
-
 .reverse-first-box{
   background-color: #ff0000;
 }
-
 .reverse-second-box{
   background-color: #0008ff;
 }
-
 .reverse-third-box{
   background-color: #ff8400;
 }
-
 .text{
   display: flex;
   flex-direction: column;
@@ -101,32 +84,35 @@
 }
 
 @media screen and (max-width:960px){
+  /* サイズ変更 */
   .size-change{
     background-color: #ff0000;
     width: 200px;
     height: 200px;
     margin: 0 auto;
   }
+  /* 色変更 */
   .color-change{
     background-color: #007bff;
     width: 300px;
     height: 300px;
     margin: 0 auto;
   }
-
+  /* マージン変更 */
   .margin-container{
     margin: 0 auto;
   }
-
   .margin-box{
     margin-left: 50px;
   }
-
+  /* フロートの解除 */
   .float-content, .float-box{
     float: none;
   }
-
-  .reverse-box{
-    flex-direction: column-reverse;
+  /* 順番変更（逆順） */
+  .reverse-container{
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  display: flex;
   }
 }
