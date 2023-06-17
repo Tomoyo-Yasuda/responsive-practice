@@ -1,148 +1,199 @@
 @charset "UTF-8";
 
-.wrapper{
+.wrapper {
   width: 1100px;
   margin: 0 auto;
 }
+
 /* サイズ変更 */
-.size-change{
+.size-change {
   background-color: #ff0000;
   width: 400px;
   height: 400px;
   margin: 0 auto;
 }
+
 /* 色変更 */
-.color-change{
+.color-change {
   background-color: #ff0000;
   width: 300px;
   height: 300px;
   margin: 0 auto;
 }
+
 /* マージン変更 */
-.margin-container{
+.margin-container {
   display: flex;
   justify-content: center;
 }
-.margin-box{
+
+.margin-box {
   width: 300px;
   height: 300px;
   margin-left: 150px;
 }
-.margin-left-box{
+
+.margin-left-box {
   background-color: #0008ff;
   margin-left: 0;
 }
-.margin-right-box{
+
+.margin-right-box {
   background-color: #22ff00;
 }
+
 /* フロート変更 */
-.float-container{
+.float-container {
   position: relative;
   overflow: hidden;
 }
-.float-content{
+
+.float-content {
   position: relative;
-  left: 50%; /* ulの代替的なやつを右に50%移動 */
+  left: 50%;
+  /* ulの代替的なやつを右に50%移動 */
   float: left;
 }
-.float-box{
+
+.float-box {
   position: relative;
   float: left;
-  width: 300px;;
+  width: 300px;
+  ;
   height: 300px;
-  left: -50%;/* ulの代替的なやつ中央に戻す */
+  left: -50%;
+  /* ulの代替的なやつ中央に戻す */
 }
-.float-red-box{
+
+.float-red-box {
   background-color: #ff0000;
 }
-.float-blue-box{
+
+.float-blue-box {
   background-color: #0008ff;
 }
+
 /* 順番変更（逆順） */
-.reverse-container{
+.reverse-container {
   display: flex;
   justify-content: center;
 }
-.reverse-box{
+
+.reverse-box {
   width: 300px;
   height: 300px;
 }
-.reverse-first-box{
+
+.reverse-first-box {
   background-color: #ff0000;
 }
-.reverse-second-box{
+
+.reverse-second-box {
   background-color: #0008ff;
 }
-.reverse-third-box{
+
+.reverse-third-box {
   background-color: #ff8400;
 }
-.text{
+
+.text {
   display: flex;
   flex-direction: column;
   align-items: center;
   line-height: 300px;
 }
+
 /* 順番変更（指定） */
-.change-container{
+.change-container {
   display: flex;
   justify-content: center;
 }
-.change-box{
+
+.change-box {
   width: 300px;
   height: 300px;
 }
-.change-first-box{
+
+.change-first-box {
   background-color: #00ff51;
 }
-.change-second-box{
+
+.change-second-box {
   background-color: #d4ff40
 }
-.change-third-box{
+
+.change-third-box {
   background-color: #ff00e1;
 }
 
+/* 表示・非表示 */
+.show-container {
+  display: flex;
+  justify-content: center;
+}
+.show-box{
+  width: 300px;
+  height: 300px;
+}
+.show-first-box{
+  background-color: #0008ff;
+  display: none;
+}
+.show-second-box{
+  background-color: #ff0000
+}
+.show-third-box {
+  background-color: #00ff51;
+}
 
-@media screen and (max-width:960px){
+@media screen and (max-width:960px) {
   /* サイズ変更 */
-  .size-change{
+  .size-change {
     background-color: #ff0000;
     width: 200px;
     height: 200px;
     margin: 0 auto;
   }
   /* 色変更 */
-  .color-change{
+  .color-change {
     background-color: #007bff;
     width: 300px;
     height: 300px;
     margin: 0 auto;
   }
   /* マージン変更 */
-  .margin-container{
+  .margin-container {
     margin: 0 auto;
   }
-  .margin-box{
+  .margin-box {
     margin-left: 50px;
   }
   /* フロートの解除 */
-  .float-content, .float-box{
+  .float-content,
+  .float-box {
     float: none;
   }
   /* 順番変更（逆順） */
-  .reverse-container{
-  flex-direction: row-reverse;
-  align-items: flex-start;
-  display: flex;
+  .reverse-container {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    display: flex;
   }
   /* 順番変更（指定） */
-  .change-container{
+  .change-container {
     display: flex;
-
   }
-  .change-first-box{
+  .change-first-box {
     order: 2;
   }
-  .change-second-box{
+  .change-second-box {
     order: 3;
+  }
+  /* 表示・非表示 */
+  .show-first-box,.show-third-box{
+    display: flex;
+  }
+  .show-second-box{
+    display: none;
   }
 }
