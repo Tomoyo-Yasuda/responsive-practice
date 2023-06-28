@@ -48,9 +48,6 @@
   margin:0 auto;
   overflow: hidden;
 }
-.float-content {
-
-}
 
 .float-box {
   float: left;
@@ -70,6 +67,7 @@
 .reverse-container {
   display: flex;
   justify-content: center;
+  flex-direction: row;
 }
 
 .reverse-box {
@@ -156,7 +154,7 @@
   .margin-box {
     margin-left: 50px;
   }
-  /* フロートの解除 */
+  /* フロートの解除  */
   .float-box {
     float: none;
   }
@@ -166,9 +164,6 @@
     align-items: flex-start;
   }
   /* 順番変更（指定） */
-  .change-container {
-    display: flex;
-  }
   .change-first-box {
     order: 2;
   }
