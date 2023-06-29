@@ -5,7 +5,7 @@
   margin: 0 auto;
 }
 
-/* サイズ変更 */
+/* Q1サイズ変更 */
 .size-change {
   background-color: #ff0000;
   width: 400px;
@@ -13,7 +13,7 @@
   margin: 0 auto;
 }
 
-/* 色変更 */
+/* Q2色変更 */
 .color-change {
   background-color: #ff0000;
   width: 300px;
@@ -21,7 +21,7 @@
   margin: 0 auto;
 }
 
-/* マージン変更 */
+/* Q3マージン変更 */
 .margin-container {
   display: flex;
   justify-content: center;
@@ -42,10 +42,10 @@
   background-color: #22ff00;
 }
 
-/* フロートの解除 */
-.float-container{
+/* Q4フロートの解除 */
+.float-clearfix {
   width: 600px;
-  margin:0 auto;
+  margin: 0 auto;
   overflow: hidden;
 }
 
@@ -63,11 +63,19 @@
   background-color: #0008ff;
 }
 
-/* 順番変更（逆順） */
+/* 回り込みの解除 */
+.float-clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Q5順番変更（逆順） */
 .reverse-container {
   display: flex;
   justify-content: center;
   flex-direction: row;
+  align-items: flex-start;
 }
 
 .reverse-box {
@@ -94,7 +102,7 @@
   line-height: 300px;
 }
 
-/* 順番変更（指定） */
+/* Q6順番変更（指定） */
 .change-container {
   display: flex;
   justify-content: center;
@@ -107,74 +115,95 @@
 
 .change-first-box {
   background-color: #00ff51;
+  order: 1;
 }
 
 .change-second-box {
-  background-color: #d4ff40
+  background-color: #d4ff40;
+  order: 2;
 }
 
 .change-third-box {
   background-color: #ff00e1;
+  order: 3;
 }
 
-/* 表示・非表示 */
+/* Q7表示・非表示 */
 .show-container {
-  display: flex;
-  justify-content: center;
+  overflow: hidden;
+  text-align:center;
+  font-size: 0;
 }
-.show-box{
+
+.show-box {
   width: 300px;
   height: 300px;
+  display: inline-block;
+
 }
-.show-first-box{
+
+.show-first-box {
   background-color: #0008ff;
   display: none;
 }
-.show-second-box{
+
+.show-second-box {
   background-color: #ff0000
 }
+
 .show-third-box {
   background-color: #00ff51;
 }
 
 @media screen and (max-width:960px) {
-  /* サイズ変更 */
+
+  /* Q1サイズ変更 */
   .size-change {
     width: 200px;
     height: 200px;
   }
-  /* 色変更 */
+
+  /* Q2色変更 */
   .color-change {
     background-color: #007bff;
   }
-  /* マージン変更 */
+
+  /* Q3マージン変更 */
   .margin-container {
     margin: 0 auto;
   }
+
   .margin-box {
     margin-left: 50px;
   }
-  /* フロートの解除  */
+
+  /* Q4フロートの解除  */
   .float-box {
     float: none;
   }
-  /* 順番変更（逆順） */
+
+  /* Q5順番変更（逆順） */
   .reverse-container {
     flex-direction: row-reverse;
-    align-items: flex-start;
   }
-  /* 順番変更（指定） */
+
+  /* Q6順番変更（指定） */
   .change-first-box {
     order: 2;
   }
   .change-second-box {
     order: 3;
   }
-  /* 表示・非表示 */
-  .show-first-box,.show-third-box{
-    display: flex;
+  .change-third-box {
+    order: 1;;
   }
-  .show-second-box{
+
+  /* Q7表示・非表示 */
+  .show-first-box{
+    display: inline-block;
+  }
+
+  .show-second-box {
     display: none;
   }
 }
