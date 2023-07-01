@@ -23,13 +23,15 @@
 
 /* Q3マージン変更 */
 .margin-container {
-  display: flex;
-  justify-content: center;
+  width: 750px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .margin-box {
   width: 300px;
   height: 300px;
+  float: left;
   margin-left: 150px;
 }
 
@@ -40,6 +42,12 @@
 
 .margin-right-box {
   background-color: #22ff00;
+}
+
+.margin-box::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 /* Q4フロートの解除 */
@@ -131,7 +139,7 @@
 /* Q7表示・非表示 */
 .show-container {
   overflow: hidden;
-  text-align:center;
+  text-align: center;
   font-size: 0;
 }
 
@@ -191,15 +199,18 @@
   .change-first-box {
     order: 2;
   }
+
   .change-second-box {
     order: 3;
   }
+
   .change-third-box {
-    order: 1;;
+    order: 1;
+    ;
   }
 
   /* Q7表示・非表示 */
-  .show-first-box{
+  .show-first-box {
     display: inline-block;
   }
 
